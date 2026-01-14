@@ -1,0 +1,124 @@
+/* ================= ROOT ================= */
+.parent-contact {
+  margin: 7vh 0;
+  width: 100%;
+  position: relative;
+}
+
+/* ================= TITLE ================= */
+.contact-title {
+  font-size: 45px;
+  color: white;
+  font-family: "russo one";
+  letter-spacing: 2px;
+  font-weight: 900;
+  padding-bottom: 5vh;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin-left: 6vw;
+  position: relative;
+}
+
+
+
+.contact-title img {
+  position: absolute;
+  z-index: -1;
+  width: 60px;
+}
+
+/* ================= CONTAINER ================= */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4vw;
+  width: 100%;
+}
+
+/* ================= SIMPLE CONTACT CARD ================= */
+.simple-contact-card {
+  width: 26vw;
+  padding: 4vh 3vw;
+  border-radius: 1.5vw;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.simple-contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+}
+
+/* ================= NAME & ROLE ================= */
+.contact-name {
+  font-size: 1.8vw;
+  font-family: poppins;
+  font-weight: 700;
+  color: white;
+}
+
+.contact-role {
+  font-size: 1.1vw;
+  font-family: poppins;
+  color: #bcd9f4;
+  margin-bottom: 3vh;
+}
+
+/* ================= CONTACT ROW ================= */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 2vh;
+  cursor: pointer;
+  color: white;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-row svg {
+  color: #ff3c6f;
+}
+
+.contact-row:hover {
+  color: #ffda00;
+  transform: translateX(5px);
+}
+
+/* ================= MOBILE ================= */
+@media all and (max-width: 768px) {
+  .contact-title {
+    font-size: 40px;
+    margin-left: 5vw;
+  }
+
+  .parent-container {
+    flex-direction: column;
+    gap: 4vh;
+  }
+
+  .simple-contact-card {
+    width: 85vw;
+    border-radius: 4vw;
+    padding: 4vh 6vw;
+  }
+
+  .contact-name {
+    font-size: 6vw;
+  }
+
+  .contact-role {
+    font-size: 3.8vw;
+  }
+
+  .contact-row {
+    font-size: 3.8vw;
+    gap: 3vw;
+  }
+}

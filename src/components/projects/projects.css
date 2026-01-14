@@ -1,0 +1,180 @@
+/* ================= ROOT ================= */
+.parent-software {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  padding-bottom: 10vh;
+}
+
+/* ================= PAGE TITLE ================= */
+.parent-software-title {
+  padding-top: 3vh;
+  font-size: 3.5vw;
+  color: rgb(188, 219, 244);
+  font-family: audiowide;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .parent-software-title {
+    font-size: 6vw;
+    padding: 2vh 4vw;
+    letter-spacing: 2px;
+  }
+}
+
+/* ================= DISCLAIMER ================= */
+.projects-disclaimer {
+  font-size: 1.4vw;
+  padding: 2vh 10vw;
+  font-family: exo;
+  font-weight: 700;
+  color: rgb(189, 225, 254);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .projects-disclaimer {
+    font-size: 3.2vw;
+    padding: 2vh 6vw;
+  }
+}
+
+/* ================= SECTION ================= */
+.projects-section {
+  width: 100%;
+  margin-top: 6vh;
+}
+
+/* ================= SUBTITLE ================= */
+.projects-subtitle {
+  text-align: center;
+  font-size: 2.2vw;
+  font-family: exo;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e8f4ff;
+  margin-bottom: 4vh;
+}
+
+@media (max-width: 768px) {
+  .projects-subtitle {
+    font-size: 5vw;
+    margin-bottom: 3vh;
+  }
+}
+
+/* ================= GRID ================= */
+.software-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2vh 6vw;
+  column-gap: 4vw;
+  row-gap: 6vh;
+}
+
+@media (max-width: 768px) {
+  .software-container {
+    flex-direction: column;
+    padding: 1vh 4vw;
+    row-gap: 3vh;
+  }
+}
+
+/* ================= CARD ================= */
+.software-content {
+  flex-basis: 45%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  padding: 2vh 1vw;
+  border-radius: 1vw;
+  gap: 1.5vh;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: rgba(188, 219, 244, 0.1);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  text-align: center;
+}
+
+.software-content:hover {
+  transform: translateY(-6px) scale(1.01);
+  border-color: #cce6ff;
+  background: rgba(188, 219, 244, 0.18);
+}
+
+@media (max-width: 768px) {
+  .software-content {
+    width: 100%;
+    border-radius: 3vw;
+    padding: 2vh 3vw;
+  }
+}
+
+/* ================= TITLE ================= */
+.software-content-title {
+  font-size: 1.4vw;
+  font-family: exo;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .software-content-title {
+    font-size: 4.2vw;
+  }
+}
+
+/* ================= DESCRIPTION ================= */
+.software-content-description {
+  padding: 0vh 1vw;
+  text-align: left;
+  font-size: 1.05vw;
+  line-height: 1.7;
+  color: #e7f2ff;
+  animation: softwareFade 0.35s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .software-content-description {
+    font-size: 3.6vw;
+    padding: 1vh 0vw;
+  }
+}
+
+/* ================= TOGGLE ================= */
+.projects-view {
+  display: block;
+}
+
+.projects-close {
+  display: none;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes softwareFade {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
