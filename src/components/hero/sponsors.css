@@ -15,7 +15,6 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  opacity: 1;
   background-size: contain;
   background-image: url("public/images/GIF by Craigson.gif");
 }
