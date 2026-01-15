@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import KeyboardDoubleArrowRightSharpIcon from "@mui/icons-material/KeyboardDoubleArrowRightSharp";
 import VanillaTilt from "vanilla-tilt";
+import { useNavigate } from "react-router-dom"; // 1. Import useNavigate
 
 import Agenda from "./agenda";
 import Schedule from "./schedule";
@@ -16,6 +17,8 @@ import { ReactComponent as ArrowRightWhite } from "../../assets/arrow-right-whit
 import { ReactComponent as ArrowRightBlack } from "../../assets/arrow-right-black.svg";
 
 const Hero = () => {
+  const navigate = useNavigate(); // 2. Initialize the hook
+
   // ------------------ Register Button ------------------
   const handleRegisterClick = () => {
     ReactGA.event({
@@ -26,13 +29,15 @@ const Hero = () => {
     window.open("https://forms.gle/fuHo3wQSTVpbZqpD7", "_blank");
   };
 
+  // 3. Updated function to use SPA navigation
   const handleCardClicks = (route) => {
     ReactGA.event({
       category: "Navigation",
       action: "click",
       label: route,
     });
-    window.open(route, "_self");
+    // Use navigate instead of window.open to prevent page reload
+    navigate(route); 
   };
 
   // ------------------ Countdown ------------------
@@ -99,7 +104,7 @@ const Hero = () => {
                   <span>th</span>
                 </div>
                 Annual Techno-Management-Science-Literary-Cultural-Skills Fest
-                &quot;Gajajyoti 2026&quot;
+                "Gajajyoti 2026"
               </div>
               <img
                 src="/images/NAAC Achievement Logo of CUTM.png"
@@ -118,7 +123,7 @@ const Hero = () => {
                 <br />
                 <br />
                 <span>
-                  🏆 Total Prize Pool: <bold>₹60,000</bold>
+                  🏆 Total Prize Pool: <strong>₹60,000</strong>
                 </span>
               </p>
             </div>
@@ -189,13 +194,19 @@ const Hero = () => {
                 <div>11–12 Feb 2026</div>
                 <Calender className="calender-icon" />
               </h3>
+              {/* Guidelines logic remains the same, now handled by navigate() */}
               <p
                 className="text2"
+                style={{ cursor: 'pointer' }}
                 onClick={() => handleCardClicks("/guidelines")}
               >
                 Guidelines <ArrowRightWhite className="arrow-right-icon" />
               </p>
-              <p className="text3" onClick={() => handleCardClicks("/events")}>
+              <p 
+                className="text3" 
+                style={{ cursor: 'pointer' }}
+                onClick={() => handleCardClicks("/events")}
+              >
                 Events <ArrowRightWhite className="arrow-right-icon" />
               </p>
             </div>
@@ -221,6 +232,7 @@ const Hero = () => {
             {/* -------- Column 4 -------- */}
             <div
               className="col4 animated-div"
+              style={{ cursor: 'pointer' }}
               onClick={() =>
                 window.open(
                   "https://www.google.com/maps/place/Centurion+University+of+Technology+%26+Management,+Bhubaneswar+(CUTM)/@20.1759206,85.7051449,18z/data=!3m1!4b1!4m6!3m5!1s0x3a19aec948fe62ef:0xb6c968c7957b6b4f!8m2!3d20.1759184!4d85.7062486!16s%2Fg%2F1v_0h5j9?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D",
@@ -231,7 +243,6 @@ const Hero = () => {
               <h3 className="text10">
                 Venue <Location className="location-icon" />
               </h3>
-              {/* 🔥 POSTER IMAGE INSIDE CARD */}
               <div className="venue-poster-wrapper">
                 <img
                   src="/images/Poster.jpeg"
