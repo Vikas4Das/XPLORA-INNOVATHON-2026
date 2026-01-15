@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .section2 {
   position: relative;
   isolation: isolate;
@@ -9,14 +16,11 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-
   background-image: url("/images/GIF by Craigson.gif");
   background-repeat: no-repeat;     /* ❌ no repeat */
   background-size: cover;            /* ✅ full cover */
   background-position: center;
   color: white;       /* 🎯 centered */
-
-  opacity: 0.;
 }
 
 /* Mobile / Tablet Portrait */
@@ -52,8 +56,12 @@
 }
 
 .agenda .title2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
 }
 
@@ -63,8 +71,12 @@
   margin-left: 6vw;
   font-family: "russo one";
   font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2vw;
   position: relative;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
@@ -77,7 +89,38 @@
   content: "";
   z-index: -1;
   border-bottom: 4px solid #d500ed;
-  border-image: linear-gradient(
+  -o-border-image: -o-linear-gradient(
+    left bottom,
+    #ffda00,
+    #ffaa17,
+    #ff7545,
+    #ff3c6f,
+    #ff0099,
+    #ed00ae,
+    #d100c4,
+    #aa0ada,
+    #9700e1,
+    #7f00e7,
+    #5e00ef,
+    #1b0cf6
+  );
+     border-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(#ffda00),
+    color-stop(#ffaa17),
+    color-stop(#ff7545),
+    color-stop(#ff3c6f),
+    color-stop(#ff0099),
+    color-stop(#ed00ae),
+    color-stop(#d100c4),
+    color-stop(#aa0ada),
+    color-stop(#9700e1),
+    color-stop(#7f00e7),
+    color-stop(#5e00ef),
+    to(#1b0cf6)
+  );
+     border-image: linear-gradient(
     to right top,
     #ffda00,
     #ffaa17,
@@ -107,8 +150,12 @@
 }
 
 .agenda-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 5vh;
   gap: 5vw;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
@@ -126,7 +173,38 @@
   color: white;
   padding: 3vh 3vw;
   border: 5px solid;
-  border-image: linear-gradient(
+  -o-border-image: -o-linear-gradient(
+    left bottom,
+    #bf00ff,
+    #d500ed,
+    #e400db,
+    #f000cb,
+    #f800bc,
+    #fb00b0,
+    #fc00a4,
+    #fd0099,
+    #fb008d,
+    #f80082,
+    #f40077,
+    #f0006d
+  );
+     border-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(#bf00ff),
+    color-stop(#d500ed),
+    color-stop(#e400db),
+    color-stop(#f000cb),
+    color-stop(#f800bc),
+    color-stop(#fb00b0),
+    color-stop(#fc00a4),
+    color-stop(#fd0099),
+    color-stop(#fb008d),
+    color-stop(#f80082),
+    color-stop(#f40077),
+    to(#f0006d)
+  );
+     border-image: linear-gradient(
     to right top,
     #bf00ff,
     #d500ed,
@@ -193,9 +271,15 @@
   }
 }
 .vision {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 5vh;
   margin-right: -3vw;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
@@ -205,15 +289,22 @@
   }
 }
 .about-vision-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: russo one;
   font-size: 4vw;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
   background-color: #a4508b;
+  background-image: -o-linear-gradient(124deg, #a4508b 0%, #5f0a87 74%);
   background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -233,7 +324,38 @@
   border-top: 5px solid;
   border-left: 5px solid;
   border-bottom: 5px solid;
-  border-image: linear-gradient(
+  -o-border-image: -o-linear-gradient(
+    left bottom,
+    #bf00ff,
+    #d500ed,
+    #e400db,
+    #f000cb,
+    #f800bc,
+    #fb00b0,
+    #fc00a4,
+    #fd0099,
+    #fb008d,
+    #f80082,
+    #f40077,
+    #f0006d
+  );
+     border-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(#bf00ff),
+    color-stop(#d500ed),
+    color-stop(#e400db),
+    color-stop(#f000cb),
+    color-stop(#f800bc),
+    color-stop(#fb00b0),
+    color-stop(#fc00a4),
+    color-stop(#fd0099),
+    color-stop(#fb008d),
+    color-stop(#f80082),
+    color-stop(#f40077),
+    to(#f0006d)
+  );
+     border-image: linear-gradient(
     to right top,
     #bf00ff,
     #d500ed,
@@ -277,10 +399,19 @@
 
 .mission {
   margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   margin-left: -3vw;
   position: relative;
   isolation: isolate;
@@ -299,15 +430,22 @@
 }
 .about-mission-title {
   margin-right: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: russo one;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 4vw;
   font-weight: 900;
   background-color: #a4508b;
+  background-image: -o-linear-gradient(124deg, #a4508b 0%, #5f0a87 74%);
   background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -327,7 +465,38 @@
   border-top: 5px solid;
   border-right: 5px solid;
   border-bottom: 5px solid;
-  border-image: linear-gradient(
+  -o-border-image: -o-linear-gradient(
+    left bottom,
+    #bf00ff,
+    #d500ed,
+    #e400db,
+    #f000cb,
+    #f800bc,
+    #fb00b0,
+    #fc00a4,
+    #fd0099,
+    #fb008d,
+    #f80082,
+    #f40077,
+    #f0006d
+  );
+     border-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(#bf00ff),
+    color-stop(#d500ed),
+    color-stop(#e400db),
+    color-stop(#f000cb),
+    color-stop(#f800bc),
+    color-stop(#fb00b0),
+    color-stop(#fc00a4),
+    color-stop(#fd0099),
+    color-stop(#fb008d),
+    color-stop(#f80082),
+    color-stop(#f40077),
+    to(#f0006d)
+  );
+     border-image: linear-gradient(
     to right top,
     #bf00ff,
     #d500ed,
@@ -369,29 +538,59 @@
 }
 
 .agendaScrollAnimateRight {
-  animation: aboutDes 0.3s linear forwards;
+  -webkit-animation: aboutDes 0.3s linear forwards;
+          animation: aboutDes 0.3s linear forwards;
 }
-@keyframes aboutDes {
+@-webkit-keyframes aboutDes {
   0% {
-    transform: translateX(50vw);
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes aboutDes {
+  0% {
+    -webkit-transform: translateX(50vw);
+            transform: translateX(50vw);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }
 
 .agendaScrollAnimateLeft {
-  animation: aboutDes1 0.3s linear forwards;
+  -webkit-animation: aboutDes1 0.3s linear forwards;
+          animation: aboutDes1 0.3s linear forwards;
 }
-@keyframes aboutDes1 {
+@-webkit-keyframes aboutDes1 {
   0% {
-    transform: translateX(-50vw);
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
     opacity: 0;
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes aboutDes1 {
+  0% {
+    -webkit-transform: translateX(-50vw);
+            transform: translateX(-50vw);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     opacity: 1;
   }
 }

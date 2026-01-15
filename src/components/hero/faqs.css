@@ -1,9 +1,21 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .parent-faqs {
   margin: 7vh 0vw;
   width: 100%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2vh;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     margin: 5vh 1vw;
@@ -15,8 +27,12 @@
   letter-spacing: 2px;
   font-weight: 900;
   color: white;;
+  display: -webkit-box;;
+  display: -ms-flexbox;;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2vw;
   position: relative;
   padding-left: 6vw;
@@ -30,7 +46,38 @@
   content: "";
   z-index: -1;
   border-bottom: 4px solid #d500ed;
-  border-image: linear-gradient(
+  -o-border-image: -o-linear-gradient(
+    left bottom,
+    #ffda00,
+    #ffaa17,
+    #ff7545,
+    #ff3c6f,
+    #ff0099,
+    #ed00ae,
+    #d100c4,
+    #aa0ada,
+    #9700e1,
+    #7f00e7,
+    #5e00ef,
+    #1b0cf6
+  );
+     border-image: -webkit-gradient(
+    linear,
+    left bottom, right top,
+    from(#ffda00),
+    color-stop(#ffaa17),
+    color-stop(#ff7545),
+    color-stop(#ff3c6f),
+    color-stop(#ff0099),
+    color-stop(#ed00ae),
+    color-stop(#d100c4),
+    color-stop(#aa0ada),
+    color-stop(#9700e1),
+    color-stop(#7f00e7),
+    color-stop(#5e00ef),
+    to(#1b0cf6)
+  );
+     border-image: linear-gradient(
     to right top,
     #ffda00,
     #ffaa17,
@@ -59,8 +106,13 @@
 }
 
 .faqs-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: 10vw;
   color: white;
   gap: 5vh;
@@ -77,9 +129,16 @@
   border: 2px dotted rgb(255, 255, 255);
   padding: 0.5vh 1vw;
   border-radius: 0.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 2vh;
   overflow-y: hidden;
   position: relative;
@@ -98,8 +157,12 @@
   font-family: Arial;
   letter-spacing: 1px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     font-size: 4vw;
   }
@@ -108,23 +171,40 @@
 .faqs-content-description {
   padding: 0vh 0vw;
   text-align: justify;
-  animation: faqsFade 0.3s ease-in forwards;
+  -webkit-animation: faqsFade 0.3s ease-in forwards;
+          animation: faqsFade 0.3s ease-in forwards;
   color: white;
   display: none;
+}
+@-webkit-keyframes faqsFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
+  }
 }
 @keyframes faqsFade {
   0% {
     opacity: 0;
-    transform: translateY(5vh);
+    -webkit-transform: translateY(5vh);
+            transform: translateY(5vh);
   }
   100% {
     opacity: 1;
-    transform: translateY(0vh);
+    -webkit-transform: translateY(0vh);
+            transform: translateY(0vh);
   }
 }
 
 .arrow-transform {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .faq-visible {

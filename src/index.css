@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira Code:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
@@ -122,6 +129,12 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #c2eaba;
+  background-image: -o-linear-gradient(
+    131deg,
+    #c2eaba 0%,
+    #c5f4e0 37%,
+    #efc2cf 100%
+  );
   background-image: linear-gradient(
     319deg,
     #c2eaba 0%,
@@ -169,7 +182,8 @@ p {
     #f1f1f2,
     #ffffff
   ); */
-  box-shadow: 0vw 1vw 3vw 1vw #6a5acd;
+  -webkit-box-shadow: 0vw 1vw 3vw 1vw #6a5acd;
+          box-shadow: 0vw 1vw 3vw 1vw #6a5acd;
 }
 
 .events-bg {
@@ -186,16 +200,30 @@ p {
   background-size: cover;
   opacity: 0.5;
   background-image: url("/images/bg4.webp");
-  animation: hue 5s linear infinite;
+  -webkit-animation: hue 5s linear infinite;
+          animation: hue 5s linear infinite;
   top: -1vh;
+}
+
+@-webkit-keyframes hue {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
 }
 
 @keyframes hue {
   0% {
-    filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
   }
   100% {
-    filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
   }
 }
 
@@ -263,10 +291,19 @@ p {
 
 .verify-title {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 2vh;
   background-image: url("/images/texture.svg");
   text-align: center;
@@ -281,9 +318,16 @@ p {
 }
 .verify-title h1 {
   font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-weight: 900;
   font-family: audiowide;
   text-transform: uppercase;

@@ -216,7 +216,6 @@ const Hero = () => {
               <p className="text8" onClick={() => handleCardClicks("/set1")}>
                 Click Here <ArrowRightBlack className="arrow-right-icon" />
               </p>
-              
             </div>
 
             {/* -------- Column 4 -------- */}
