@@ -21,6 +21,7 @@
   }
 }
 .parent-schedule::before {
+  height: 100%;
   content: " ";
   position: absolute;
   inset: 0;
