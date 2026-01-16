@@ -57,7 +57,7 @@
 
 .hero-srmvec-logo {
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-    width: 15vw;
+    width: 10vw;
   }
 }
 
@@ -878,7 +878,7 @@
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  margin-top: 5vh;
+  
 }
 
 /* ================= DOWNLOAD BROCHURE BUTTON ================= */
@@ -918,7 +918,6 @@
 @media all and (max-width: 768px) and (orientation: portrait) {
   .hero-action-buttons {
     gap: 2vh;
-    margin-top: 3vh;
   }
 
   .brochure_btn {
@@ -934,5 +933,60 @@
   .brochure_btn a {
     font-size: 4vw;
     letter-spacing: -2px;
+  }
+}
+
+
+/* Highlight container */
+.prize-highlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vw;
+  padding: 0.6vh 1.2vw;
+  border-radius: 2vw;
+  background: linear-gradient(
+    135deg,
+    #ffb347,
+    #ffcc33,
+    #ffd700
+  );
+  color: #000;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(255, 204, 0, 0.45);
+  animation: prizeGlow 2.5s infinite alternate;
+}
+
+/* Amount emphasis */
+.prize-amount {
+  font-size: 1.8vw;
+  font-family: poppins;
+  font-weight: 900;
+  color: #7a0000;
+}
+
+/* Small tag */
+.hackathon-tag {
+  font-weight: 700;
+}
+
+/* Glow animation */
+@keyframes prizeGlow {
+  from {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+  }
+  to {
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.9);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .prize-highlight {
+    padding: 1vh 4vw;
+    border-radius: 6vw;
+  }
+
+  .prize-amount {
+    font-size: 6vw;
   }
 }

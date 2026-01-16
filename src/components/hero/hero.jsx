@@ -37,7 +37,7 @@ const Hero = () => {
       label: route,
     });
     // Use navigate instead of window.open to prevent page reload
-    navigate(route); 
+    navigate(route);
   };
 
   // ------------------ Countdown ------------------
@@ -95,7 +95,7 @@ const Hero = () => {
               <img
                 src="/images/white logon enw .PNG"
                 alt="cutm logo"
-                width="70vw"
+                width="90vw"
                 className="hero-srm-logo"
               />
               <div className="tag">
@@ -116,14 +116,17 @@ const Hero = () => {
 
             <div className="title1">
               <span className="hackathon">Xplora Innovathon 2026</span>
+
               <p className="description">
-                <span>24-Hour Hackathon</span>
+                <span className="hackathon-tag">24-Hour Hackathon</span>
                 <br />
                 Building innovative and impactful technical solutions
                 <br />
                 <br />
-                <span>
-                  🏆 Total Prize Pool: <strong>₹60,000</strong>
+                {/* 🔥 Highlighted Prize Pool */}
+                <span className="prize-highlight">
+                  🏆 Total Prize Pool
+                  <span className="prize-amount">₹60,000</span>
                 </span>
               </p>
             </div>
@@ -143,13 +146,13 @@ const Hero = () => {
                 className="brochure_btn"
                 onClick={() =>
                   window.open(
-                    "/files/Xplora_Innovathon_2026_Brochure.pdf",
+                    "/docs/HACKTHON.pdf",
                     "_blank"
                   )
                 }
               >
                 <div>
-                  <a>BROCHURE</a>
+                  <a href="/docs/HACKTHON.pdf" download="/docs/HACKTHON.pdf">BROCHURE</a>
                 </div>
                 <div>
                   <KeyboardDoubleArrowRightSharpIcon style={{ fontSize: 30 }} />
@@ -197,14 +200,14 @@ const Hero = () => {
               {/* Guidelines logic remains the same, now handled by navigate() */}
               <p
                 className="text2"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
                 onClick={() => handleCardClicks("/guidelines")}
               >
                 Guidelines <ArrowRightWhite className="arrow-right-icon" />
               </p>
-              <p 
-                className="text3" 
-                style={{ cursor: 'pointer' }}
+              <p
+                className="text3"
+                style={{ cursor: "pointer" }}
                 onClick={() => handleCardClicks("/events")}
               >
                 Events <ArrowRightWhite className="arrow-right-icon" />
@@ -232,7 +235,7 @@ const Hero = () => {
             {/* -------- Column 4 -------- */}
             <div
               className="col4 animated-div"
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
               onClick={() =>
                 window.open(
                   "https://www.google.com/maps/place/Centurion+University+of+Technology+%26+Management,+Bhubaneswar+(CUTM)/@20.1759206,85.7051449,18z/data=!3m1!4b1!4m6!3m5!1s0x3a19aec948fe62ef:0xb6c968c7957b6b4f!8m2!3d20.1759184!4d85.7062486!16s%2Fg%2F1v_0h5j9?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D",
